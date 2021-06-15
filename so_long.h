@@ -6,7 +6,7 @@
 /*   By: sgoffaux <sgoffaux@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 11:01:47 by sgoffaux          #+#    #+#             */
-/*   Updated: 2021/06/14 14:20:57 by sgoffaux         ###   ########.fr       */
+/*   Updated: 2021/06/15 14:50:40 by sgoffaux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <fcntl.h>
 
 # ifndef BLOCK
-#  define BLOCK 64
+#  define BLOCK 8
 # endif
 
 typedef struct s_map
