@@ -6,7 +6,7 @@
 /*   By: sgoffaux <sgoffaux@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 11:01:47 by sgoffaux          #+#    #+#             */
-/*   Updated: 2021/06/15 14:50:40 by sgoffaux         ###   ########.fr       */
+/*   Updated: 2021/06/16 11:41:16 by sgoffaux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <fcntl.h>
 
 # ifndef BLOCK
-#  define BLOCK 8
+#  define BLOCK 32
 # endif
 
 typedef struct s_map
@@ -42,6 +42,23 @@ typedef struct s_player
 	int 				y;
 	enum e_direction	dir;
 }				t_player;
+
+typedef struct s_data
+{
+	void	*img;
+	char	*addr;
+	int		img_width;
+	int		img_height;
+}				t_data;
+
+typedef	struct s_assets
+{
+	t_data	*floor;
+	t_data	*wall;
+	t_data	*player;
+	t_data	*door;
+	t_data	*loot;
+}				t_assets;
 
 int		ft_check_valid(char *filename, t_map *map);
 
