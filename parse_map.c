@@ -6,7 +6,7 @@
 /*   By: sgoffaux <sgoffaux@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 11:43:17 by sgoffaux          #+#    #+#             */
-/*   Updated: 2021/06/16 10:30:44 by sgoffaux         ###   ########.fr       */
+/*   Updated: 2021/06/21 11:58:31 by sgoffaux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,5 @@ int	ft_check_valid(char *filename, t_map *map)
 	{
 		return (ft_fill_array(filename, map));
 	}
-	
 	return (0);
 }

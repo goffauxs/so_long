@@ -6,7 +6,7 @@
 /*   By: sgoffaux <sgoffaux@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 11:01:47 by sgoffaux          #+#    #+#             */
-/*   Updated: 2021/06/16 11:41:16 by sgoffaux         ###   ########.fr       */
+/*   Updated: 2021/06/21 13:22:35 by sgoffaux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,18 +47,29 @@ typedef struct s_data
 {
 	void	*img;
 	char	*addr;
+	char	*relative_path;
 	int		img_width;
 	int		img_height;
 }				t_data;
 
-typedef	struct s_assets
+enum e_tnames
 {
-	t_data	*floor;
-	t_data	*wall;
-	t_data	*player;
-	t_data	*door;
-	t_data	*loot;
-}				t_assets;
+	floor,
+	wall,
+	door,
+	player,
+	loot,
+	count
+};
+
+typedef struct s_params
+{
+	t_map		map;
+	void		*mlx;
+	void		*mlx_win;
+	t_data		*tiles;
+	t_player	player;
+}				t_params;
 
 int		ft_check_valid(char *filename, t_map *map);
 
